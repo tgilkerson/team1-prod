@@ -14,7 +14,7 @@ pipeline {
     }
   }
   environment {
-    cmAddr = "cm.127.0.0.1.nip.io"
+    cmAddr = "cm-chartmuseum.charts:8080"
   }
   stages {
     stage("deploy") {
