@@ -23,10 +23,12 @@ pipeline {
       }
       steps {
         container("helm") {
-          sh "helm repo add chartmuseum http://${cmAddr}"
-          sh "helm repo update"
-          sh "helm dependency update helm"
-          sh "helm upgrade -i prod helm --namespace prod --force"
+          withCredentials([usernamePassword(credentialsId: "chartmuseum", usernameVariable: "USER", passwordVariable: "PASS")]) {
+            sh "helm repo add --username $USER --password $PASS chartmuseum http://${cmAddr}"
+            sh "helm repo update"
+            sh "helm dependency update helm"
+            sh "helm upgrade -i team1-prod helm --namespace team1-prod --force"
+          }
         }
       }
     }
