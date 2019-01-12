@@ -24,7 +24,7 @@ pipeline {
       steps {
         container("helm") {
           withCredentials([usernamePassword(credentialsId: "chartmuseum", usernameVariable: "USER", passwordVariable: "PASS")]) {
-            sh "helm repo add --username $USER --password $PASS chartmuseum http://${cmAddr}"
+            sh "helm repo add chartmuseum http://$USER:$PASS@${cmAddr}"
             sh "helm repo update"
             sh "helm dependency update helm"
             sh "helm upgrade -i team1-prod helm --namespace team1-prod --force"
