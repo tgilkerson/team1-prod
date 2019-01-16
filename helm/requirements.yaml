@@ -4,4 +4,4 @@ dependencies:
   version: 0.0.1
 - name: aegjxnode
   repository: "@chartmuseum"
-  version: 0.1.2  
+  version: 0.1.6  

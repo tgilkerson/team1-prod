@@ -1,0 +1,4 @@
+/*.tgz
+/.DS_Store
+/helm/*.tgz
+/helm/charts/*.tgz
