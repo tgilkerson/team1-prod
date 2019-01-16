@@ -4,6 +4,6 @@ dependencies:
   version: 0.0.1
 - name: aegjxnode
   repository: http://cm.127.0.0.1.nip.io
-  version: 0.1.7
-digest: sha256:83d5cc9cba2a5c29d7162a46cbf419961a275a83194c20e3bca1200577a271ab
-generated: 2019-01-15T22:47:32.5727753-05:00
+  version: 0.1.8
+digest: sha256:e052f175e347713b69a9fab0cf5551c6976587f057f3725ffa60edc3fca08816
+generated: 2019-01-16T13:36:17.0863964-05:00
